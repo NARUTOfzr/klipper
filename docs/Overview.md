@@ -35,8 +35,6 @@ communication with the Klipper developers.
     locations.
   - [Endstop phase](Endstop_Phase.md): Stepper assisted Z endstop
     positioning.
-  - [Axis Twist Compensation](Axis_Twist_Compensation.md): A tool to compensate
-    for inaccurate probe readings due to twist in X gantry.
 - [Resonance compensation](Resonance_Compensation.md): A tool to
   reduce ringing in prints.
   - [Measuring resonances](Measuring_Resonances.md): Information on
@@ -56,7 +54,7 @@ communication with the Klipper developers.
   perfectly square.
 - [PWM tools](Using_PWM_Tools.md): Guide on how to use PWM controlled
   tools such as lasers or spindles.
-- [Exclude Object](Exclude_Object.md): The guide to the Exclude Objects
+- [Exclude Object](Exclude_Object.md): The guide to the Exclude Objecs
   implementation.
 
 ## Developer Documentation
@@ -94,7 +92,5 @@ communication with the Klipper developers.
 - [Bootloaders](Bootloaders.md): Developer information on
   micro-controller flashing.
 - [CAN bus](CANBUS.md): Information on using CAN bus with Klipper.
-  - [CAN bus troubleshooting](CANBUS_Troubleshooting.md): Tips for
-    troubleshooting CAN bus.
 - [TSL1401CL filament width sensor](TSL1401CL_Filament_Width_Sensor.md)
 - [Hall filament width sensor](Hall_Filament_Width_Sensor.md)
