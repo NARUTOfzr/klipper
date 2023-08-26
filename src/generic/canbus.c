@@ -4,23 +4,19 @@
 //
 // This file may be distributed under the terms of the GNU GPLv3 license.
 
-#include "autoconf.h" // CONFIG_CANBUS_FREQUENCY
-#include "canbus.h" // canhw_send
-#include "canserial.h" // canserial_notify_tx
-#include "command.h" // DECL_CONSTANT
-
-DECL_CONSTANT("CANBUS_FREQUENCY", CONFIG_CANBUS_FREQUENCY);
+#include "canbus.h" // canbus_send
+#include "canserial.h" // canserial_send
 
 int
-canbus_send(struct canbus_msg *msg)
+canserial_send(struct canbus_msg *msg)
 {
-    return canhw_send(msg);
+    return canbus_send(msg);
 }
 
 void
-canbus_set_filter(uint32_t id)
+canserial_set_filter(uint32_t id)
 {
-    canhw_set_filter(id);
+    canbus_set_filter(id);
 }
 
 void

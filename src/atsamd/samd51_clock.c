@@ -39,13 +39,11 @@ route_pclock(uint32_t pclk_id, uint32_t clkgen_id)
 
 // Enable a peripheral clock and power to that peripheral
 void
-enable_pclock(uint32_t pclk_id, int32_t pm_id)
+enable_pclock(uint32_t pclk_id, uint32_t pm_id)
 {
     route_pclock(pclk_id, CLKGEN_48M);
-    if (pm_id >= 0) {
-        uint32_t pm_port = pm_id / 32, pm_bit = 1 << (pm_id % 32);
-        (&MCLK->APBAMASK.reg)[pm_port] |= pm_bit;
-    }
+    uint32_t pm_port = pm_id / 32, pm_bit = 1 << (pm_id % 32);
+    (&MCLK->APBAMASK.reg)[pm_port] |= pm_bit;
 }
 
 // Return the frequency of the given peripheral clock
@@ -159,7 +157,7 @@ static void
 clock_init_internal(void)
 {
     // Enable USB clock recovery mode if applicable
-    if (CONFIG_USB) {
+    if (CONFIG_USBSERIAL) {
         // Temporarily switch main clock to internal 32K clock
         gen_clock(CLKGEN_MAIN, GCLK_GENCTRL_SRC_OSCULP32K);
 

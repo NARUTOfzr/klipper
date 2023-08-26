@@ -45,7 +45,6 @@ void gpio_pwm_write(struct gpio_pwm g, uint16_t val);
 
 struct i2c_config {
     int fd;
-    uint8_t addr;
 };
 
 struct i2c_config i2c_setup(uint32_t bus, uint32_t rate, uint8_t addr);
